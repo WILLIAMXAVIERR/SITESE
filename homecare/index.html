@@ -1,13 +1,84 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css"/>
-    <title>SITE SE</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serviços Essenciais</title>
+  <link rel="stylesheet" href="index.css" />
 </head>
+
 <body>
-    <script src="index.js"></script>
-    <h1>SERVIÇOS ESSENCIAIS</h1>
+  <header>
+
+  </header>
+  
+  <section id="main-menu">
+    <h1>Serviços Essenciais</h1>
+    <nav>
+      <ul>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#cursos">Cursos</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Contate-nos</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <section id="inicial">
+    <div>
+      <p>"Cuidar do seu bem-estar é a nossa especialidade."</p>
+    </div>
+  </section>
+
+  <section id="serviços">
+    <h2>Serviços</h2>
+    <div class="card">
+      <h3>Home Care</h3>
+      <p>Cuidados de saúde e apoio especializado diretamente no domicílio.</p>
+    </div>
+    <div class="card">
+      <h3>Serviços Gerais</h3>
+      <p>Atendemos às necessidades de empresas, condomínios e residências.</p>
+    </div>
+    <h2>Cursos</h2>
+    <div class="card">
+      <h3>Curso de Cuidador de Idosos</h3>
+      <p>Curso profissionalizante para especialização na área.</p>
+      <button onclick="inscrever()">Inscreva-se</button>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <h2>Quem Somos</h2>
+    <p>Somos uma empresa especializada em serviços gerais, priorizando atendimento humanizado, segurança e organização dos ambientes.</p>
+  </section>
+
+  <section id="depoimentos">
+    <h2>Depoimentos</h2>
+    <blockquote>
+      <p>"Quero agradecer o professor Jefferson pela dedicação e paciência. Aprendi muita coisa, foi um curso maravilhoso!"</p>
+      <footer>— Thais Guimarães, Aluna</footer>
+    </blockquote>
+  </section>
+
+  <section id="final">
+    <h2>Contate-nos</h2>
+    <p>📞 +55 61 99284-2191</p>
+    <p>📧 seservicosessenciais@gmai.com</p>
+    <form>
+      <input type="text" placeholder="Seu nome" required />
+      <input type="email" placeholder="Seu e-mail" required />
+      <textarea placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Serviços Essenciais</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
