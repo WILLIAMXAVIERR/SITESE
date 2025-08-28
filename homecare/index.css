@@ -69,3 +69,203 @@ footer {
   background: #004d40;
   color: white;
 }
+#depoimentos {
+  background: #A7DC58;
+  border-radius: 8px;
+  color: #333;
+}
+
+#depoimentos h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.depoimentos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.depoimento {
+  background: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  max-width: 350px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.depoimento p {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.depoimento-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.depoimento-footer strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.depoimento-footer span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.estrelas {
+  color: #4CAF50;
+  font-size: 1.1rem;
+  margin-top: 0.3rem;
+}
+
+#final {
+  background: #fff;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.contato-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contato-topo h2 {
+  color: #A7DC58; /* verde claro */
+  font-weight: bold;
+  margin: 0;
+}
+
+.btn-whatsapp {
+  background: #A7DC58;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-whatsapp img {
+  width: 20px;
+  height: 20px;
+}
+
+#final hr {
+  margin: 1rem 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.contato-conteudo {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contato-menu ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.contato-menu ul li {
+  margin: 0.6rem 0;
+}
+
+.contato-menu a {
+  text-decoration: none;
+  color: #2e7d32; /* verde escuro */
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.contato-menu a:hover {
+  color: #A7DC58;
+}
+
+.form-email {
+  display: flex;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 280px;
+}
+
+.form-email input {
+  border: none;
+  padding: 0.6rem;
+  flex: 1;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.form-email button {
+  background: #A7DC58;
+  border: none;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-email button img {
+  width: 18px;
+  height: 18px;
+}
+
+.contato-info p {
+  margin: 0.6rem 0;
+  color: #2e7d32;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contato-info img {
+  width: 20px;
+  height: 20px;
+}
+
+.social {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 12px;
+}
+
+.social img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.2s;
+}
+
+.social img:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: #555;
+  font-size: 0.9rem;
+}
