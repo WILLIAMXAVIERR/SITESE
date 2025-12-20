@@ -1,4 +1,3 @@
-/* ===================== CARROSSEL ===================== */
 (function () {
   const wrapper = document.querySelector('.carousel-wrapper');
   const carousel = document.querySelector('.carousel');
@@ -7,12 +6,15 @@
   const prevBtn = document.querySelector('.prev-btn');
   const nextBtn = document.querySelector('.next-btn');
 
-  if (!wrapper || !carousel || !carouselCards || cards.length === 0 || !prevBtn || !nextBtn) return;
+  if (!carousel || !carouselCards || cards.length === 0 || !prevBtn || !nextBtn) return;
 
   let currentIndex = 0;
   let cardsPerView = 2;
+  let cardStepPx = 0;
 
-  const computeCardsPerView = () => (window.innerWidth <= 768 ? 1 : 2);
+  function computeCardsPerView() {
+    return window.innerWidth <= 768 ? 1 : 2;
+  }
 
   function getCardTotalWidth(cardEl) {
     const style = window.getComputedStyle(cardEl);
@@ -21,40 +23,54 @@
     return cardEl.getBoundingClientRect().width + marginL + marginR;
   }
 
+  function recalc() {
+    cardsPerView = computeCardsPerView();
+    if (cardsPerView < 1) cardsPerView = 1;
+
+    cards = Array.from(document.querySelectorAll('.card-separado'));
+    const referenceCard = cards[0];
+    const cardTotalWidth = getCardTotalWidth(referenceCard);
+    cardStepPx = cardTotalWidth * cardsPerView;
+
+    // Normaliza currentIndex para múltiplos de cardsPerView
+    currentIndex = currentIndex % cards.length;
+
+    update();
+  }
+
   function update() {
-    if (!cards[0]) return;
     const oneCardWidth = getCardTotalWidth(cards[0]);
     const translateX = -(oneCardWidth * currentIndex);
     carouselCards.style.transition = 'transform 0.45s ease';
     carouselCards.style.transform = `translateX(${translateX}px)`;
   }
 
-  function recalc() {
-    cardsPerView = Math.max(1, computeCardsPerView());
-    cards = Array.from(document.querySelectorAll('.card-separado'));
-    currentIndex = currentIndex % Math.max(cards.length, 1);
-    update();
-  }
-
   function goNext() {
     currentIndex += cardsPerView;
-    if (currentIndex >= cards.length) currentIndex = 0;
+    if (currentIndex >= cards.length) currentIndex = 0; // loop infinito
     update();
   }
 
   function goPrev() {
     currentIndex -= cardsPerView;
-    if (currentIndex < 0) currentIndex = Math.max(0, cards.length - cardsPerView);
+    if (currentIndex < 0) currentIndex = Math.max(0, cards.length - cardsPerView); // loop infinito
     update();
   }
 
-  nextBtn.addEventListener('click', (e) => { e.preventDefault(); goNext(); });
-  prevBtn.addEventListener('click', (e) => { e.preventDefault(); goPrev(); });
+  nextBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    goNext();
+  });
+
+  prevBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    goPrev();
+  });
 
   let resizeTimer = null;
   window.addEventListener('resize', () => {
     if (resizeTimer) clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(recalc, 110);
+    resizeTimer = setTimeout(() => recalc(), 110);
   });
 
   const mo = new MutationObserver(() => {
@@ -74,7 +90,7 @@
     }, { passive: true });
 
     carousel.addEventListener('touchmove', (ev) => {
-      if (!dragging || !ev.touches || ev.touches.length === 0 || !cards[0]) return;
+      if (!dragging || !ev.touches || ev.touches.length === 0) return;
       currentX = ev.touches[0].clientX;
       const delta = currentX - startX;
       const oneCardWidth = getCardTotalWidth(cards[0]);
@@ -97,124 +113,114 @@
   recalc();
 })();
 
-/* ===================== ROLAGEM SUAVE ===================== */
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', function (e) {
-    const href = this.getAttribute('href');
-    if (!href || href === '#') return;
-    const target = document.querySelector(href);
-    if (!target) return;
+// transicao 
 
-    e.preventDefault();
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (!target) return;
 
-    const targetPosition = target.getBoundingClientRect().top + window.scrollY;
-    const startPosition = window.scrollY;
-    const distance = targetPosition - startPosition;
-    const duration = 800; // ms
-    let start = null;
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+      const startPosition = window.scrollY;
+      const distance = targetPosition - startPosition;
+      const duration = 300; // tempo total da rolagem (ms)
+      let start = null;
 
-    function animation(currentTime) {
-      if (start === null) start = currentTime;
-      const progress = currentTime - start;
-      const ratio = Math.min(progress / duration, 1);
-      window.scrollTo(0, startPosition + distance * ratio);
-      if (progress < duration) requestAnimationFrame(animation);
+      function animation(currentTime) {
+        if (start === null) start = currentTime;
+        const progress = currentTime - start;
+        const ratio = Math.min(progress / duration, 1); // vai de 0 até 1
+        window.scrollTo(0, startPosition + distance * ratio); // movimento linear
+        if (progress < duration) requestAnimationFrame(animation);
+      }
+
+      requestAnimationFrame(animation);
+    });
+  });
+
+// icon menu botao
+
+  window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) { 
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
     }
+  });
 
-    requestAnimationFrame(animation);
+  const btnMenu = document.getElementById("btnMenu");
+const menuMobile = document.getElementById("menu-Mobile");
+
+// Abrir / Fechar ao clicar no ícone
+btnMenu.addEventListener("click", (event) => {
+  event.stopPropagation(); // impede fechar ao clicar no ícone
+  menuMobile.classList.toggle("abrir");
+});
+
+// Fechar ao clicar em qualquer lugar fora do popup
+document.addEventListener("click", (event) => {
+  if (!menuMobile.contains(event.target) && event.target !== btnMenu) {
+    menuMobile.classList.remove("abrir");
+  }
+});
+
+// Fechar ao clicar em qualquer opção dentro do popup
+menuMobile.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    menuMobile.classList.remove("abrir");
   });
 });
 
-/* ===================== ENVIO DE E-MAIL (EmailJS, sem abrir app) ===================== */
-/*
-  Pré-requisitos:
-  1) Criar conta em https://www.emailjs.com/
-  2) Criar Service (ex.: Gmail) -> obter SERVICE_ID
-  3) Criar Template -> obter TEMPLATE_ID
-     - No template, coloque variáveis: from_email, subject, message, reply_to, to_email (opcional)
-     - Configure o "To" padrão para seu e-mail OU permita "to_email" dinâmico
-  4) Pegar PUBLIC_KEY
-  5) No HTML você já tem o formulário:
-     <form class="form-email">
-       <input type="email" placeholder="ENVIE-NOS UM E-MAIL" required />
-       <button type="submit"><img src="imagens/email.jpg" alt="Enviar" /></button>
-     </form>
+// Fechar ao dar scroll
+window.addEventListener("scroll", () => {
+  if (menuMobile.classList.contains("abrir")) {
+    menuMobile.classList.remove("abrir");
+  }
+});
 
-(function emailSender() {
-  const form = document.querySelector('.form-email');
-  if (!form) return;
+//   ANIMAÇÃO EXTRA DO MENU
+const menu = document.getElementById("menu-Mobile");
 
-  const emailInput = form.querySelector('input[type="email"]');
-  const submitBtn  = form.querySelector('button[type="submit"]');
+let ultimaAbertura = false;
 
-  // >>> SUBSTITUA pelos seus dados do EmailJS <<<
-  const PUBLIC_KEY  = 'e6zx2ESlZE4JUzrSL';
-  const SERVICE_ID  = 'Sservice_wjjdyap';
-  const TEMPLATE_ID = 'template_caqud6w';
+// Observer para detectar quando a classe "abrir" muda
+const observer = new MutationObserver(() => {
+  const abriuAgora = menu.classList.contains("abrir");
 
-  // E-mail que vai receber as mensagens (se o seu template permitir to_email dinâmico)
-  const DESTINATION_EMAIL = 'williamrego240604@gmail.com';
-
-  // Carrega EmailJS via CDN se não estiver disponível
-  function ensureEmailJSLoaded() {
-    return new Promise((resolve, reject) => {
-      if (window.emailjs && typeof window.emailjs.init === 'function') {
-        return resolve();
+  // se abriu
+  if (abriuAgora && !ultimaAbertura) {
+    menu.animate(
+      [
+        { opacity: 0, transform: "translateY(-15px)" },
+        { opacity: 1, transform: "translateY(0)" }
+      ],
+      {
+        duration: 1250,
+        easing: "cubic-bezier(.2,.9,.2,1)",
+        fill: "forwards"
       }
-      const s = document.createElement('script');
-      s.src = 'https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js';
-      s.async = true;
-      s.onload = () => resolve();
-      s.onerror = () => reject(new Error('Falha ao carregar EmailJS CDN.'));
-      document.head.appendChild(s);
-    });
+    );
   }
 
-  function isValidEmail(v) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+  // se fechou
+  if (!abriuAgora && ultimaAbertura) {
+    menu.animate(
+      [
+        { opacity: 1, transform: "translateY(0)" },
+        { opacity: 0, transform: "translateY(-10px)" }
+      ],
+      {
+        duration: 200,
+        easing: "ease-in",
+        fill: "forwards"
+      }
+    );
   }
 
-  async function handleSubmit(e) {
-    e.preventDefault();
+  ultimaAbertura = abriuAgora;
+});
 
-    const userEmail = (emailInput.value || '').trim();
-    if (!isValidEmail(userEmail)) {
-      alert('Digite um e-mail válido.');
-      emailInput.focus();
-      return;
-    }
-
-    // Desabilita botão durante envio
-    const oldDisabled = submitBtn.disabled;
-    submitBtn.disabled = true;
-
-    try {
-      await ensureEmailJSLoaded();
-      // Inicializa (pode chamar mais de uma vez sem problema)
-      window.emailjs.init(PUBLIC_KEY);
-
-      // Monte os parâmetros esperados pelo seu TEMPLATE do EmailJS
-      const templateParams = {
-        from_email: userEmail,                         // e-mail da pessoa
-        reply_to: userEmail,                           // "responder para" a pessoa
-        subject: 'Dúvidas sobre o home care',          // assunto fixo
-        message: 'O usuário solicitou ajuda pelo site.', // corpo (pode enriquecer)
-        to_email: DESTINATION_EMAIL                    // se seu template aceitar destinatário dinâmico
-      };
-
-      // Envia
-      await window.emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
-
-      alert('✅ Mensagem enviada com sucesso! Vamos retornar no seu e-mail.');
-      form.reset();
-    } catch (err) {
-      console.error('Erro no envio via EmailJS:', err);
-      alert('❌ Ocorreu um erro ao enviar. Verifique suas chaves do EmailJS e tente novamente.');
-    } finally {
-      submitBtn.disabled = oldDisabled;
-    }
-  }
-
-  form.addEventListener('submit', handleSubmit);
-})();
-*/
+// observar mudanças de classe
+observer.observe(menu, { attributes: true, attributeFilter: ["class"] });

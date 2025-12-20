@@ -1,54 +1,68 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Serviços Essenciais</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="imagens/favicon.jpg" type="image/x-icon">
   </head>
-
   <body>
-    <div class="top-bar">
-      <div class="contatos">
-        <span>📞 +55 61 99284-2191</span>
-        <span>📩 seservicosessenciais@gmail.com</span>
-      </div>
-      <div class="social">
-        <a href="https://www.facebook.com/share/179UpHqAyT/"><img src="imagens/facebook.jpg" alt="Facebook" /></a>
-        <a href="https://www.instagram.com/servicos_essenciais?igsh=OHJlbzJ1YnN0Y3c2"><img src="imagens/instagram.jpg" alt="Instagram" /></a>
-      </div>
-    </div>
+    
     <header>
       <div class="header-content">
         <div class="logo-area">
           <img
-            src="imagens/logo.jpg"
+            src="imagens/logo-oficial-removebg-preview.png"
             alt="Logo Serviços Essenciais"
             class="logo-img"
           />
-        </div>
+
+          <img
+            class="icon-menu"
+            id="btnMenu"
+            src="imagens/icon-menu.png"
+            alt="icon-menu"/>
+
+          </div>
+          <div id="menu-Mobile" class="menuMobile">
+            <ul id="ul-pop-up">
+              <li><a href="#servicos">SERVIÇOS</a></li>
+              <li><a href="#sobre">QUEM SOMOS</a></li>
+              <li>
+                <a href="https://wa.me/5561999642301?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Tenho%20interesse%20no%20curso.">
+                  CURSOS
+                </a>
+
+              </li>
+              <li><a href="#depoimentos">DEPOIMENTOS</a></li>
+            </ul>
+          </div>
         <nav>
-          <ul>
+          <ul id="ul-opcoes-header">
             <li><a href="#servicos">SERVIÇOS</a></li>
             <li><a href="#sobre">QUEM SOMOS</a></li>
-            <li><a href="https://wa.me/5561992842191?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20tenho%20interesse%20em%20saber%20sobre%20o%20curso%21">CURSOS</a></li>
+            <li>
+               <a href="https://wa.me/5561999642301?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Tenho%20interesse%20no%20curso.">
+                 CURSOS
+                </a
+              >
+            </li>
             <li><a href="#depoimentos">DEPOIMENTOS</a></li>
           </ul>
+          <a
+            href="https://wa.me/5561999642301?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Tenho%20interesse%20em%20fazer%20um%20or%C3%A7amento%20de%20servi%C3%A7o%20de%20Home%20Care" target="_blank" class="btn-orca"
+          >
+            <button class="btn-orcamento">Solicite um orcamento</button>
+          </a>
         </nav>
-        <a
-          href="https://wa.me/5561992842191?text=Ol%C3%A1%2C%20vim%20pelo%20site%21"
-          class="btn-whatsapp"
-          target="_blank"
-        >
-          <img src="imagens/wpp.jpg" alt="WhatsApp" /> Contate-nos
-        </a>
       </div>
     </header>
 
     <main>
       <section class="banner">
         <img
-          src="imagens/banner.png"
+          src="imagens/banner-oficial.png"
           alt="Equipe Serviços Essenciais"
           class="banner-img"
         />
@@ -65,232 +79,333 @@
             dedicação em cada detalhe.
           </p>
           <a
-            href="https://wa.me/5561992842191?text=Ol%C3%A1%2C%20vim%20pelo%20site%21"
+            href="https://wa.me/5561999642301?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Tenho%20interesse%20no%20curso."
             class="btn-whatsapp"
+            id="btn-whats-section"
             target="_blank"
           >
-            <img src="imagens/wpp.jpg" alt="WhatsApp" /> Contate-nos
+            Tenho interesse no curso <img src="imagens/coracao-vital.png" alt="">
           </a>
         </div>
       </section>
 
-      <section class="servicos-cursos" id="servicos" reveal >
-        <h2>ATENDIMENTOS E CURSOS</h2>
-        <div class="cards-servicos">
-          <div class="card-servico" id="card-servico-home_care" onclick="window.location.href='Home_Care.html'">
-            <h3>HOME CARE</h3>
-            <span class="sub">SERVIÇO DE ATENDIMENTO DOMICILIAR</span>
-            <p>
-              O serviço de Home Care oferece cuidados de saúde e apoio
-              especializado diretamente no domicílio, proporcionando conforto,
-              segurança e qualidade de vida ao paciente. É uma alternativa
-              humanizada à internação hospitalar, favorecendo a recuperação no
-              ambiente familiar.
-            </p>
-          </div>
-          <div class="card-servico">
-            <h3>Serviços Gerais</h3>
-            <span class="sub">ATENDEMOS A SUA NECESSIDADE</span>
-            <p>
-              Atendemos empresas, condomínios e residências, com soluções
-              completas e personalizadas para cada necessidade.
-            </p>
-          </div>
-          <a href="https://wa.me/5561992842191?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20tenho%20interesse%20em%20saber%20sobre%20o%20curso%21" target="_blank" class="btn-curso">
-          <div class="card-servico">
-            <h3>CURSO</h3>
-            <span class="sub">CURSO DE CUIDADOR DE IDOSOS</span>
-            <p>
-              Curso profissionalizante de cuidador de idosos, para que você
-              possa se especializar na área. Clique neste card para entrar em
-              contato conosco e se inscrever!
-            </p>
-          </div>
-          </a>
-        </div>
-      </section>
-
-      <section class="sobre-nos" id="sobre">
+      <section class="sobre-nos" >
         <div class="sobre-container">
           <div class="sobre-texto">
             <h2>Sobre Nós</h2>
             <p>
-               Serviços Essenciais e Home Care é uma empresa que visa recrutar, capacitar e direcionar trabalhadores com abordagem humanizada com o objetivo de promover o conforto e qualidade de vida das pessoas assistidas, buscando o aprimoramento e as atualizações necessárias. 
+              Serviços Essenciais e Home Care é uma empresa que visa recrutar, capacitar e direcionar trabalhadores com abordagem humanizada, com o objetivo de promover o conforto e qualidade de vida das pessoas assistidas, buscando o aprimoramento e as atualizações necessárias.
+
             </p>
-            <a
-              href="https://wa.me/5561992842191?text=Ol%C3%A1%2C%20vim%20pelo%20site%21"
-              class="btn-whatsapp"
-              target="_blank"
-            >
-              <img src="imagens/wpp.jpg" alt="WhatsApp" class="sobre-nos-img"/> Contate-nos
-            </a>
+            
           </div>
-          <div class="sobre-img-area">
-            <img
-              src="imagens/equipe.png"
-              alt="Equipe com certificados"
-              class="sobre-img"
-            />
-            <div class="sobre-img-bg"></div>
-          </div>
+          
         </div>
       </section>
 
-    <section class="depoimentos" id="depoimentos">
-        <h1>DEPOIMENTOS</h1>
-
-      <div class="carousel-wrapper">
-          <button class="prev-btn"> ⬅ </button>
-
-        <div class="carousel">
-            <div class="carousel-cards">
-
-            <div class="card-separado">
-                <div class="card">
-                <p><em>Quero agradecer primeiramente a Deus por nós coloca de pé todos os dias &#x1F64F; E hj em especial ao professor q tirou um tempo do seus afazeres e de sua família para nos dar esse curso q pra mim foi gratificante por todo conhecimento q tem e por nós passar um pouco desse conhecimento!!!
-Obrigado professor pela paciência comigo e os demais sempre vcs &#x1F64F; Deus abençoe sempre vcs &#x1F64F;</em></p>
-                </div>
-                <div class="depoimento-footer">
-                <div>
-                    <strong>Jodi</strong>
-                    <div class="estrelas">★★★★★</div>
-                </div>
-                </div>
+      <section class="top-descricao" >
+ 
+        <!-- <img src="imagens/logo-oficial-removebg-preview.png" class="tt" alt=""> -->
+ 
+        <div class="card-geral">
+          <div class="card-top" id="card-animado">
+            <div class="icon-descrip">
+              <img src="imagens/livro_coracao.png" alt="livro com coração" />
             </div>
+            <h3>Planos personalizados</h3>
+            <p>
+              Atendimento que respeita as necessidades únicas de cada cliente.
+            </p>
+          </div>
 
-            <div class="card-separado">
-                <div class="card">
-                    <p>
-Professor JEFFERSON S.VIERA, gostaria de expressar minha sincera GRATIDÃO, por sua dedicação e pelo excelente curso de CUIDADOR. Seus ensinamentos Vai ser fundamentais para o meu desenvolvimento profissional e pessoal, e levarei suas lições para toda a vida."
-Muitíssimo obrigado por compartilhar
-tanto conhecimento e experiência conosco durante o curso de cuidador. Sua paixão pela área é inspiradora e você foi uma verdadeira fonte de sabedoria para todos nós &#x1FAE1;
-Que venha o próximo CURSO.. &#x1FA7A; &#x1F489;
-
-</p>
-                </div>
-                <div class="depoimento-footer">
-                <div>
-                    <strong>Allice</strong>
-                    <div class="estrelas">★★★★★</div>
-                </div>
-                </div>
+          <div class="card-top" id="card-animado">
+            <div class="icon-descrip">
+              <img
+                class="icon-mais"
+                src="imagens/mais.png"
+                alt="livro com coração"
+              />
             </div>
+            <h3>Supervisão profissional</h3>
+            <p>
+              Enfermeiros especializados monitoram os cuidados e orientam os
+              cuidadores.
+            </p>
+          </div>
 
-            <div class="card-separado">
-                <div class="card">
-                    <p>
-Tenho só agradecer, pela dedicação, foi um excelente curso que pena que foi apenas 2 dias, mais nos ensinou muito, obrigado por tudo e por tanto ...só gratidão &#x2764; &#x2764;
-</p>
-                </div>
-                <div class="depoimento-footer">
-                <div>
-                    <strong>Vaneila </strong>
-                    <div class="estrelas">★★★★★</div>
-                </div>
-                </div>
+          <div class="card-top" id="card-animado">
+            <div class="icon-descrip">
+              <img
+                class="coracao-vital"
+                src="imagens/coracao-vital.png"
+                alt="livro com coração"
+              />
             </div>
-
-            <!-- <div class="card-separado">
-                <div class="card">
-                    <h2>Card 4</h2>
-                    <p>Conteúdo do card 4.</p>
-                </div>
-                <div class="depoimento-footer">
-                <div>
-                    <strong>Thais Guimarães</strong>
-                    <div class="estrelas">★★★★★</div>
-                </div>
-                </div>
-            </div>
-
-            <div class="card-separado">
-                <div class="card">
-                    <h2>Card 5</h2>
-                    <p>Conteúdo do card 5.</p>
-                </div>
-
-                <div class="depoimento-footer">
-                        <div>
-                        <strong>Thais Guimarães</strong>
-                        <div class="estrelas">★★★★★</div>
-                        </div>
-                </div>
-            </div>
-
-            <div class="card-separado">
-                <div class="card">
-                    <h2>Card 6</h2>
-                    <p>Conteúdo do card 6.</p>
-                </div>
-
-                <div class="depoimento-footer">
-                        <div>
-                        <strong>Thais Guimarães</strong>
-                        <div class="estrelas">★★★★★</div>
-                        </div>
-                </div>
-            </div> -->
-  </div>
+            <h3>Transparência total</h3>
+            <p>
+              Relatórios diários que mantêm os familiares informados sobre tudo.
+            </p>
+          </div>
         </div>
-  <!-- <button class="prev-btn"> ⬅ </button> -->
-  <button class="next-btn"> ➡ </button>
-</div>
 
+        <h2 class="servico" id="servicos">Serviços</h2>
+
+        <div class="servico-descricao">
+
+          
+          <a href="https://wa.me/5561999642301?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Tenho%20interesse%20no%20curso." class="cursos-link">
+            <div class="card2" id="cursos" style="height: 86%;">
+            <div class="icon2">
+              <img
+                src="imagens/livro_coracao.png"
+                alt="quadrado mais seta"
+              />
+            </div>
+            <h3>CURSOS</h3>
+            <p>
+             Cursos profissionalizantes para que você
+                possa se especializar na área. Clique neste card para entrar em
+                contato conosco e se inscrever!
+              </p>
+            </div>
+          </a>
+            
+            <div class="card2" id="home-care" onclick="window.location.href='Home_Care.html'">
+              <div class="icon2">
+                <img src="imagens/casa-coracao.png" alt="coracao com uma casa" style="width: 40px;" />
+              </div>
+              <h3>HOME CARE</h3>
+              <p>
+                O serviço de Home Care oferece cuidados de saúde e apoio
+                especializado diretamente no domicílio, proporcionando conforto,
+                segurança e qualidade de vida ao paciente. É uma alternativa
+                humanizada à internação hospitalar, favorecendo a recuperação no
+                ambiente familiar.
+              </p>
+            </div>
+
+          <div class="card2">
+            <div class="icon2">
+              <img src="imagens/quadrado_mais.png" alt="quadrado com mais" />
+            </div>
+            <h3>CURSO DE CUIDADOR DE IDOSOS </h3>
+            <p>
+              Oferecemos a capacitação para todos os cuidadores de acordo com a patologia específica do idoso. Garantindo assistência e qualidade no ambiente familiar.
+
+            </p>
+          </div>
+
+          <div class="card2">
+            <div class="icon2">
+              <img src="imagens/boneco.png" alt="boneco" />
+            </div>
+            <h3>CURSO DE ZELADORIA E PORTARIA</h3>
+            <p>
+              Oferecemos cursos de portaria e zeladoria, unindo tecnologia, atendimento humanizado e capacitação profissional para garantir segurança, organização e conservação de condomínios e empresas.
+            </p>
+          </div>
+
+          <div class="card2" id="card-espec" >
+            <div class="icon2">
+              <img src="imagens/boneco-circulo.png" alt="boneco no círculo" />
+            </div>
+            <h3>SERVIÇO DE SERVIÇOS GERAIS</h3>
+            <p>
+              Englobando serviços como Jardinagem, Portaria e Zeladoria, Monitoramento, Limpeza para eventos e Limpeza predial.
+            </p>
+          </div>
+
+          
+<!--  -->
+          
+          
+        </div>
+          <a
+          href="https://wa.me/5561999642301?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Tenho%20interesse%20no%20curso."
+          class="btn-whatsapp"
+            id="btn-whats-section2"
+            target="_blank"
+          >
+            Tenho interesse no curso <img src="imagens/coracao-vital.png" alt="">
+          </a>
           
       </section>
 
+      <section class="depoimentos" id="depoimentos">
+        <h1>DEPOIMENTOS</h1>
+
+        <div class="carousel-wrapper">
+          <button class="prev-btn">⬅</button>
+
+          <div class="carousel">
+            <div class="carousel-cards">
+              <div class="card-separado">
+                <div class="card">
+                  <img src="imagens/print1.jpg" alt="depoimento em forma de print de whatsapp">
+                </div>
+                <!-- <div class="depoimento-footer">
+                  <div>
+                    <strong>Jodi</strong>
+                    <div class="estrelas">★★★★★</div>
+                  </div>
+                </div> -->
+              </div>
+
+              <div class="card-separado">
+                <div class="card">
+                  <img src="imagens/print2.jpg" alt="depoimento em forma de print de whatsapp">
+                </div>
+                <!-- <div class="depoimento-footer">
+                  <div>
+                    <strong>Allice</strong>
+                    <div class="estrelas">★★★★★</div>
+                  </div>
+                </div> -->
+              </div>
+
+              <div class="card-separado">
+                <div class="card">
+                  <img src="imagens/print3.jpg" alt="depoimento em forma de print de whatsapp">
+                </div>
+              </div>
+
+              <div class="card-separado">
+                <div class="card">
+                  <img src="imagens/print4.jpg" alt="depoimento em forma de print de whatsapp">
+                </div>
+              </div>
+
+              <div class="card-separado">
+                <div class="card">
+                  <img src="imagens/print5.jpg" alt="depoimento em forma de print de whatsapp">
+                </div>
+              </div>
+
+              <div class="card-separado">
+                <div class="card">
+                  <img src="imagens/print6.jpg" alt="depoimento em forma de print de whatsapp">
+                </div>
+              </div>
+
+              <div class="card-separado">
+                <div class="card">
+                  <img src="imagens/print7.jpg" alt="depoimento em forma de print de whatsapp">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <button class="prev-btn"> ⬅ </button> -->
+          <button class="next-btn">➡</button>
+        </div>
+      </section>
+
+      <section class="beneficios">
+
+        <img
+          src="imagens/abraco_paciente.png"
+          alt="Enfermeira abracando paciente"
+          class="abrancando_paciente"
+        />
+
+        <div class="beneficios-text">
+        <p>Benefícios em contratar nossos cuidadores​</p>
+
+        <ul class="list-beneficios">
+          <li>Planos adaptáveis e personalizados</li>
+          <li>Avaliação inicial gratuita</li>
+          <li>Cuidadores capacitados</li>
+          <li>Supervisão permanente</li>
+          <li>Apoio aos familiares</li>
+          <li>Plano de cuidados específico para cada situação</li>
+          <li>Responsabilidade legal pelo cuidador</li>
+          <li>Troca de cuidador em caso de não adaptação</li>
+          <li>Relatórios diários aos familiares</li>
+          <li>Parcerias multiprofissionais</li>
+        </ul>
+
+          <a
+            href="https://wa.me/5561999642301?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Tenho%20interesse%20no%20curso."
+            class="btn-whatsapp"
+            id="btn-whats-section3"
+            target="_blank"
+          >
+            Tenho interesse no curso <img src="imagens/coracao-vital.png" alt="">
+          </a>
+        </div>
+      </section>
+
+      <a
+        href="https://wa.me/5561999642301?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Tenho%20interesse%20no%20curso."
+        target="_blank"
+      >
+        <img
+          class="icon-flutuante"
+          src="imagens/whatsicon.png"
+          alt="WhatsApp"
+        />
+      </a>
+
       <footer class="rodape">
         <div class="rodape-container">
+
           <div class="rodape-titulo">
-            <h2>SERVIÇOS ESSENCIAIS</h2>
-            <a
-              href="https://wa.me/5561992842191?text=Ol%C3%A1%2C%20vim%20pelo%20site%21"
-              class="btn-whatsapp"
-              target="_blank"
-            >
-              <img src="imagens/wpp.jpg" alt="WhatsApp" /> Contate-nos
-            </a>
+            <p class="text-footer">Deseja contratar nossos serviços? </p>
+            <h2>Fale conosco</h2>
+            <p>Não deixe para amanhã o que pode transformar a vida de quem você ama hoje. <p>
           </div>
-          <hr />
+
           <div class="rodape-conteudo">
-            <ul class="rodape-menu">
-              <li><a href="#servicos">SERVIÇOS</a></li>
-              <li><a href="#sobre">QUEM SOMOS</a></li>
-              <li><a href="Home_Care.html">Home Care</a></li>
-              <li><a href="#depoimentos">DEPOIMENTOS</a></li>
-              <li><a href="mailto:servicosessenciaisme@gmail.com?subject=Envio%20de%20Curr%C3%ADculo&body=Ol%C3%A1,%20segue%20meu%20curr%C3%ADculo%20em%20anexo.">TRABALHE CONOSCO</a></li>
-            </ul>
-            <form class="form-email" id="footerEmailForm" onsubmit="return enviarEmailFooter(event)">
-              <input
-                id="footerEmail"
-                name="email"
-                type="email"
-                placeholder="ENVIE-NOS UM E-MAIL"
-                required
-              />
-              <button type="submit">
-                <img src="imagens/email.jpg" alt="Enviar" />
-              </button>
-            </form>      
+            
             <div class="rodape-info">
+              <h3>Telefone</h3>
               <p>
-                <img src="imagens/telefone.jpg" alt="Telefone" /> +55 61
-                99284-2191
+                <img  src="imagens/wpp.jpg" alt="Telefone"  /> +55 61
+                9 9964-2301
               </p>
+              <!-- <hr/> -->
+              <h3>E-mail</h3>
               <p>
                 <img src="imagens/envelopeemail.png" alt="E-mail" />
-                seservicosessenciais@gmail.com
+                servicosessenciaisme@gmail.com
+
               </p>
+              
+              <br/>
+
+              <a href="mailto:servicosessenciaisme@gmail.com?subject=Dúvida&body=Olá, gostaria de saber sobre...">
+                <button class="btn-saber">Trabalhe conosco!</button>
+              </a>
+
+            </div>
+
+              <!-- <form class="form">
+                <input class="input" type="text" placeholder="Nome e Sobrenome" required>
+                  <div class="linha-2">
+                    <input class="input" type="email" placeholder="Seu E-mail" required>
+                    <input class="input" type="text" placeholder="(DDD) + 9 + celular" required>
+                  </div>
+                <input class="input" type="text" placeholder="Assunto" required>
+                <input class="input" id="input-Especial" type="text" placeholder="Digite sua dúvida ou mensagem " required> -->
+
+              <!-- </form> -->
+
+            </div>
+            
+            <hr>
+
               <div class="social">
                 <a href="https://www.facebook.com/share/179UpHqAyT/"
                   ><img src="imagens/facebook.jpg" alt="Facebook"
                 /></a>
-                <a href="https://www.instagram.com/servicos_essenciais?igsh=OHJlbzJ1YnN0Y3c2"
+                <a
+                  href="https://www.instagram.com/servicos_essenciais?igsh=OHJlbzJ1YnN0Y3c2"
                   ><img src="imagens/instagram.jpg" alt="Instagram"
                 /></a>
+                <p>© 2025 Todos os direitos reservados | Serviços Essenciais LTDA</p>
               </div>
-            </div>
-          </div>
+
+            
+          <!-- <hr /> -->
         </div>
       </footer>
     </main>

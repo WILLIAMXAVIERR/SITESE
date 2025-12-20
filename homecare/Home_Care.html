@@ -1,100 +1,84 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Serviços Essenciais</title>
-    <link rel="stylesheet" href="Home_Care.css" />
+    <link rel="stylesheet" href="Home_Care.css">
+    <link rel="shortcut icon" href="imagens/favicon.jpg" type="image/x-icon">
   </head>
-
   <body>
-    <div class="top-bar">
-      <div class="contatos">
-        <span>📞 +55 61 99284-2191</span>
-        <span>📩 seservicosessenciais@gmail.com</span>
-      </div>
-      <div class="social">
-        <a href="https://www.facebook.com/share/179UpHqAyT/"><img src="imagens/facebook.jpg" alt="Facebook" /></a>
-        <a href="https://www.instagram.com/servicos_essenciais?igsh=OHJlbzJ1YnN0Y3c2"><img src="imagens/instagram.jpg" alt="Instagram" /></a>
-      </div>
-    </div>
+    
     <header>
       <div class="header-content">
         <div class="logo-area">
           <img
-            src="imagens/logo.jpg"
+            src="imagens/logo-oficial-removebg-preview.png"
             alt="Logo Serviços Essenciais"
             class="logo-img"
           />
-        </div>
+
+          <img
+            class="icon-menu"
+            id="btnMenu"
+            src="imagens/icon-menu.png"
+            alt="icon-menu"/>
+
+          </div>
+          <div id="menu-Mobile" class="menuMobile">
+            <ul id="ul-pop-up">
+              <li><a href="#servicos">SERVIÇOS</a></li>
+              <li><a href="#sobre">QUEM SOMOS</a></li>
+              <li>
+                <a
+                  href="https://wa.me/5561992842191?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20tenho%20interesse%20em%20saber%20sobre%20o%20curso%21"
+                  >CURSOS</a
+                >
+              </li>
+              <li><a href="#depoimentos">DEPOIMENTOS</a></li>
+            </ul>
+          </div>
         <nav>
-          <ul>
+          <ul id="ul-opcoes-header">
             <li><a href="#servicos">SERVIÇOS</a></li>
             <li><a href="#sobre">QUEM SOMOS</a></li>
-            <li><a href="https://wa.me/5561992842191?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20tenho%20interesse%20em%20saber%20sobre%20o%20curso%21">CURSOS</a></li>
+            <li>
+              <a
+                href="https://wa.me/5561992842191?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20tenho%20interesse%20em%20saber%20sobre%20o%20curso%21"
+                >CURSOS</a
+              >
+            </li>
             <li><a href="#depoimentos">DEPOIMENTOS</a></li>
           </ul>
+          <a
+            href="https://wa.me/5561992842191?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20tenho%20interesse%20em%20saber%20sobre%20o%20curso%21" target="_blank" class="btn-orca"
+          >
+            <button class="btn-orcamento">Solicite um orcamento</button>
+          </a>
         </nav>
-        <a
-          href="https://wa.me/5561992842191?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20tenho%20interesse%20em%20saber%20sobre%20o%20curso"
-          class="btn-whatsapp"
-          target="_blank"
-        >
-          <img src="imagens/wpp.jpg" alt="WhatsApp" /> Contate-nos
-        </a>
       </div>
     </header>
 
     <main>
       <section class="banner">
         <img
-          src="imagens/banner_home_care.jpg"
-          alt="Banner Home Care"
+          src="imagens/banner-oficial.png"
+          alt="Equipe Serviços Essenciais"
           class="banner-img"
         />
         <div class="banner-text">
-          <h1>Home Care: cuidado profissional, conforto no seu lar.</h1>
+          <h1>Home Care: cuidado profissional, conforto no seu lar"</h1>
           <p>
-            Oferecemos cuidado domiciliar personalizado e humanizado, proporcionando conforto, segurança e qualidade de vida para você e sua família. Nossa equipe de profissionais qualificados está pronta para atender às necessidades específicas de cada paciente, promovendo autonomia, bem-estar e atenção constante, garantindo que o cuidado seja realizado com respeito, carinho e eficiência no ambiente mais acolhedor: o seu lar.
+            Oferecemos cuidado domiciliar personalizado e humanizado, proporcionando conforto, segurança e qualidade de vida para você e sua família. Nossa equipe de profissionais qualificados está pronta para atender às necessidades específicas de cada paciente, promovendo autonomia, bem-estar e atenção constante, garantindo que o cuidado seja realizado com respeito, carinho e eficiência no ambiente mais acolhedor: o seu lar.
           </p>
           <a
-            href="https://wa.me/5561992842191?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20tenho%20interesse%20em%20saber%20sobre%20o%20curso"
+            href="https://wa.me/5561999642301?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Tenho%20interesse%20no%20serviço%20Home%20Care."
             class="btn-whatsapp"
+            id="btn-whats-section"
             target="_blank"
           >
-            <img src="imagens/wpp.jpg" alt="WhatsApp" /> Contate-nos
+            Tenho interesse no curso <img src="imagens/coracao-vital.png" alt="">
           </a>
-        </div>
-      </section>
-
-      <section class="servicos-cursos" id="servicos" reveal >
-        <h2>ATENDIMENTOS E CURSOS</h2>
-        <div class="cards-servicos">
-          <div class="card-servico">
-            <h3>HOME CARE</h3>
-            <span class="sub">SERVIÇO DE ATENDIMENTO DOMICILIAR</span>
-            <p>
-              O serviço de Home Care oferece cuidados de saúde e apoio
-              especializado diretamente no domicílio, proporcionando conforto,
-              segurança e qualidade de vida ao paciente. É uma alternativa
-              humanizada à internação hospitalar, favorecendo a recuperação no
-              ambiente familiar.
-            </p>
-          </div>
-          <div class="card-servico">
-            <h3>PARA O QUE SERVE?</h3>
-            <span class="sub">UTILIDADE PARA VOCÊ</span>
-            <p>
-              O Home Care serve para oferecer atendimento médico, de enfermagem e suporte terapêutico no domicílio, garantindo ao paciente conforto, segurança, recuperação mais rápida e qualidade de vida, sem a necessidade de longas internações hospitalares.
-            </p>
-          </div>
-          <div class="card-servico">
-            <h3>Mais Qualidade de Vida </h3>
-            <span class="sub">PARA TODA A FAMÍLIA</span>
-            <p>
-              Além do tratamento, o Home Care promove bem-estar, segurança e proximidade da família no dia a dia.
-            </p>
-          </div>
         </div>
       </section>
 
@@ -103,134 +87,337 @@
           <div class="sobre-texto">
             <h2>Sobre Nós</h2>
             <p>
-             
-
-              Serviços Essenciais é uma empresa que visa recrutar, capacitar e direcionar trabalhadores com abordagem humanizada, com o objetivo de promover o conforto e qualidade na vida das pessoas em geral, mantendo a ordem e garantindo a organização do seu evento!
+              Serviços Essenciais e Home Care é uma empresa que visa recrutar,
+              capacitar e direcionar trabalhadores com abordagem humanizada com
+              o objetivo de promover o conforto e qualidade de vida das pessoas
+              assistidas, buscando o aprimoramento e as atualizações
+              necessárias.
             </p>
+            
+          </div>
+          
+        </div>
+      </section>
+
+      <div class="top-descricao">
+        <div class="card-geral">
+
+          <div class="card-top" id="card-animado">
+            <div class="icon-descrip">
+              <img src="imagens/casa-coracao.png" alt="coracao com uma casa" style="width: 80px;" />
+            </div>
+            <h3>Home Care</h3>
+            <span class="sub">SERVIÇO DE ATENDIMENTO DOMICILIAR</span>
+            <p>
+              O serviço de Home Care oferece cuidados de saúde e apoio especializado diretamente no domicílio, proporcionando conforto, segurança e qualidade de vida ao paciente. É uma alternativa humanizada à internação hospitalar, favorecendo a recuperação no ambiente familiar.
+            </p>
+          </div>
+
+          <div class="card-top"  id="card-animado">
+            <div class="icon-descrip">
+              <img
+                class="icon-mais"
+                src="imagens/mais.png"
+                alt="livro com coração"
+              />
+            </div>
+            <h3>PARA O QUE SERVE?</h3>
+            <span class="sub">UTILIDADE PARA VOCÊ</span>
+            <p>
+              O Home Care serve para oferecer atendimento médico, de enfermagem e suporte terapêutico no domicílio, garantindo ao paciente conforto, segurança, recuperação mais rápida e qualidade de vida, sem a necessidade de longas internações hospitalares.
+            </p>
+          </div>
+
+          <div class="card-top"  id="card-animado">
+            <div class="icon-descrip">
+              <img
+                class="coracao-vital"
+                src="imagens/coracao-vital.png"
+                alt="livro com coração"
+              />
+            </div>
             <a
-              href="https://wa.me/5561992842191?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20tenho%20interesse%20em%20saber%20sobre%20o%20curso"
-              class="btn-whatsapp"
+              href="https://wa.me/5561992842191?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20tenho%20interesse%20em%20saber%20sobre%20o%20curso%21"
               target="_blank"
+              class="btn-curso"
             >
-              <img src="imagens/wpp.jpg" alt="WhatsApp" /> Contate-nos
+              <h3>MAIS QUALIDADE DE VIDA</h3>
+            <span class="sub">PARA TODA A FAMÍLIA</span>
+            <p>
+              Além do tratamento, o Home Care promove bem-estar, segurança e proximidade da família no dia a dia.
+            </p>
             </a>
           </div>
-          <div class="sobre-img-area">
-            <img
-              src="imagens/equipe.png"
-              alt="Equipe com certificados"
-              class="sobre-img"
-            />
-            <div class="sobre-img-bg"></div>
-          </div>
         </div>
-      </section>
 
-    <section class="depoimentos" id="depoimentos">
-        <h1>DEPOIMENTOS</h1>
-
-      <div class="carousel-wrapper">
-          <button class="prev-btn"> ⬅ </button>
-
-        <div class="carousel">
-            <div class="carousel-cards">
-
-            <div class="card-separado">
-                <div class="card">
-                <p><em>Bom dia a todos, primeiramente quero agradecer o professor Jefferson pela dedicação, paciência, por um curso tão bom, aprendi muita coisa, foi um curso maravilhoso!</em></p>
-                </div>
-                <div class="depoimento-footer">
-                <div>
-                    <strong>Thais Guimarães</strong>
-                    <div class="estrelas">★★★★★</div>
-                </div>
-                </div>
-            </div>
-
-            <div class="card-separado">
-                <div class="card">
-                    <p>Bom dia a todos, primeiramente quero agradecer o professor Jefferson, pela dedicação, paciência, por um curso tão bom, aprendi muita coisa, foi um curso maravilhoso, Jefferson passa uma segurança pra todos nós, com todo cuidado, um ótimo professor, quero te desejar tudo de bom, que Deus possa te abençoar sempre continuando esse ótimo profissional, é quero desejar a todos do grupo boa sorte nessa nova jornada, que Deus possa abençoar casa um desse grupo, emfim só tenho gratidão!!
-</p>
-                </div>
-                <div class="depoimento-footer">
-                <div>
-                    <strong>Gabriel Guimarães</strong>
-                    <div class="estrelas">★★★★★</div>
-                </div>
-                </div>
-            </div>
-
-            <div class="card-separado">
-                <div class="card">
-                    <p>Lorem Ipsum is simply dummy text of the printing and type*
-setting industry. Lorem Ipsum has been the industry's stan*
-dard dummy text ever since the 1500s, when an unknown
-printer took a galley of type and scrambled it to make a type
-specimen book.</p>
-                </div>
-                <div class="depoimento-footer">
-                <div>
-                    <strong>Lorem Ipsum - Lorem</strong>
-                    <div class="estrelas">★★★★★</div>
-                </div>
-                </div>
-            </div>
-
-  </div>
-        </div>
-  <!-- <button class="prev-btn"> ⬅ </button> -->
-  <button class="next-btn"> ➡ </button>
-</div>
+        <h2 class="servico" id="servicos">Serviços</h2>
+        <div class="servico-descricao">
 
           
+          <div class="card2" id="cursos" onclick="window.location.href='index.html'">
+            <div class="icon2">
+              <img
+                src="imagens/livro_coracao.png"
+                alt="quadrado mais seta"
+              />
+            </div>
+            <h3>CURSO</h3>
+            <p>
+              Curso profissionalizante de cuidador de idosos, para que você
+              possa se especializar na área. Clique neste card para entrar em
+              contato conosco e se inscrever!
+            </p>
+          </div>
+          
+          <div class="card2"  id="home-care" >
+            <div class="icon2">
+<img src="imagens/casa-coracao.png" alt="coracao com uma casa" style="width: 40px;" />              </div>
+            <h3>HOME CARE</h3>
+            <p>
+              O serviço de Home Care oferece cuidados de saúde e apoio
+              especializado diretamente no domicílio, proporcionando conforto,
+              segurança e qualidade de vida ao paciente. É uma alternativa
+              humanizada à internação hospitalar, favorecendo a recuperação no
+              ambiente familiar.
+            </p>
+          </div>
+
+          <div class="card2">
+            <div class="icon2">
+              <img src="imagens/quadrado_mais.png" alt="quadrado com mais" />
+            </div>
+            <h3>CUIDADOR DE IDOSOS</h3>
+            <p>
+              Promovemos, mantemos e recuperamos a saúde do idoso. Com
+              profissionais treinados e capacitados, garantimos assistência de
+              qualidade no ambiente familiar.
+            </p>
+          </div>
+
+          <div class="card2">
+            <div class="icon2">
+              <img src="imagens/boneco.png" alt="boneco" />
+            </div>
+            <h3>CUIDADOR INFANTIL E BABÁS</h3>
+            <p>
+              Dispomos de cuidadores especializados para acompanhamento
+              infantil, no serviço de babá ou para crianças com necessidades
+              específicas.
+            </p>
+          </div>
+
+          <div class="card2">
+            <div class="icon2">
+              <img src="imagens/boneco-circulo.png" alt="boneco no círculo" />
+            </div>
+            <h3>CUIDADOR DE GESTANTE</h3>
+            <p>
+              Apoio completo antes e depois da gestação, auxiliando na higiene,
+              alimentação, rotina doméstica e consultas médicas.
+            </p>
+          </div>
+
+          <div class="card2">
+            <div class="icon2">
+              <img
+                src="imagens/quadrado-mais-seta.png"
+                alt="quadrado mais seta"
+              />
+            </div>
+            <h3>CUIDADOR PÓS-CIRÚRGICO</h3>
+            <p>
+              Oferecemos cuidado especializado para pessoas de todas as idades,
+              em situações transitórias ou que necessitem de cuidado permanente.
+            </p>
+          </div>
+<!--  -->
+          
+        </div>
+          <a
+          href="https://wa.me/5561999642301?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Tenho%20interesse%20no%20serviço%20Home%20Care."
+            id="btn-whats-section2"
+            target="_blank"
+          >
+            Tenho interesse no curso <img src="imagens/coracao-vital.png" alt="">
+          </a>
+          
+      </div>
+
+      <section class="depoimentos" id="depoimentos">
+        <h1>DEPOIMENTOS</h1>
+
+        <div class="carousel-wrapper">
+          <button class="prev-btn">⬅</button>
+
+          <div class="carousel">
+            <div class="carousel-cards">
+              <div class="card-separado">
+                <div class="card">
+                  <img src="imagens/print1.jpg" alt="depoimento em forma de print de whatsapp">
+                </div>
+                <!-- <div class="depoimento-footer">
+                  <div>
+                    <strong>Jodi</strong>
+                    <div class="estrelas">★★★★★</div>
+                  </div>
+                </div> -->
+              </div>
+
+              <div class="card-separado">
+                <div class="card">
+                  <img src="imagens/print2.jpg" alt="depoimento em forma de print de whatsapp">
+                </div>
+                <!-- <div class="depoimento-footer">
+                  <div>
+                    <strong>Allice</strong>
+                    <div class="estrelas">★★★★★</div>
+                  </div>
+                </div> -->
+              </div>
+
+              <div class="card-separado">
+                <div class="card">
+                  <img src="imagens/print3.jpg" alt="depoimento em forma de print de whatsapp">
+                </div>
+              </div>
+
+              <div class="card-separado">
+                <div class="card">
+                  <img src="imagens/print4.jpg" alt="depoimento em forma de print de whatsapp">
+                </div>
+              </div>
+
+              <div class="card-separado">
+                <div class="card">
+                  <img src="imagens/print5.jpg" alt="depoimento em forma de print de whatsapp">
+                </div>
+              </div>
+
+              <div class="card-separado">
+                <div class="card">
+                  <img src="imagens/print6.jpg" alt="depoimento em forma de print de whatsapp">
+                </div>
+              </div>
+
+              <div class="card-separado">
+                <div class="card">
+                  <img src="imagens/print7.jpg" alt="depoimento em forma de print de whatsapp">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <button class="prev-btn"> ⬅ </button> -->
+          <button class="next-btn">➡</button>
+        </div>
       </section>
+
+      <div class="beneficios">
+
+        <img
+          src="imagens/abraco_paciente.png"
+          alt="Enfermeira abracando paciente"
+          class="abrancando_paciente"
+        />
+
+        <div class="beneficios-text">
+        <p>Benefícios em contratar nossos cuidadores​</p>
+
+        <ul class="list-beneficios">
+          <li>Planos adaptáveis e personalizados</li>
+          <li>Avaliação inicial gratuita</li>
+          <li>Cuidadores capacitados</li>
+          <li>Supervisão permanente</li>
+          <li>Apoio aos familiares</li>
+          <li>Plano de cuidados específico para cada situação</li>
+          <li>Responsabilidade legal pelo cuidador</li>
+          <li>Troca de cuidador em caso de não adaptação</li>
+          <li>Relatórios diários aos familiares</li>
+          <li>Parcerias multiprofissionais</li>
+        </ul>
+
+          <a
+            href="https://wa.me/5561999642301?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Tenho%20interesse%20no%20serviço%20Home%20Care."
+            class="btn-whatsapp"
+            id="btn-whats-section3"
+            target="_blank"
+          >
+            Tenho interesse no curso <img src="imagens/coracao-vital.png" alt="">
+          </a>
+        </div>
+      </div>
+
+      <a
+        href="https://wa.me/5561999642301?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Tenho%20interesse%20no%20serviço%20Home%20Care."
+        target="_blank"
+      >
+        <img
+          class="icon-flutuante"
+          src="imagens/whatsicon.png"
+          alt="WhatsApp"
+        />
+      </a>
 
       <footer class="rodape">
         <div class="rodape-container">
+
           <div class="rodape-titulo">
-            <h2>SERVIÇOS ESSENCIAIS</h2>
-            <a
-              href="https://wa.me/5561992842191?text=Ol%C3%A1%2C%20vim%20pelo%20site%21"
-              class="btn-whatsapp"
-              target="_blank"
-            >
-              <img src="imagens/wpp.jpg" alt="WhatsApp" /> Contate-nos
-            </a>
+            <p class="text-footer">Deseja contratar nossos serviços? </p>
+            <h2>Fale conosco</h2>
+            <p>Não deixe para amanhã o que pode transformar a vida de quem você ama hoje. <p>
           </div>
-          <hr />
+
           <div class="rodape-conteudo">
-            <ul class="rodape-menu">
-              <li><a href="#servicos">SERVIÇOS</a></li>
-              <li><a href="#sobre">QUEM SOMOS</a></li>
-              <li><a href="#cursos">CURSOS</a></li>
-              <li><a href="#depoimentos">DEPOIMENTOS</a></li>
-              <li><a href="#trabalhe">TRABALHE CONOSCO</a></li>
-            </ul>
-            <form class="form-email">
-              <input type="email" placeholder="ENVIE-NOS UM E-MAIL" required />
-              <button type="submit">
-                <img src="imagens/email.jpg" alt="Enviar" />
-              </button>
-            </form>
+            
             <div class="rodape-info">
+              <h3>Telefone</h3>
               <p>
-                <img src="imagens/telefone.jpg" alt="Telefone" /> +55 61
-                99284-2191
+                <img  src="imagens/wpp.jpg" alt="Telefone"  /> +55 61
+                9 9964-2301
               </p>
+              <!-- <hr/> -->
+              <h3>E-mail</h3>
               <p>
                 <img src="imagens/envelopeemail.png" alt="E-mail" />
-                seservicosessenciais@gmail.com
+                servicosessenciaisme@gmail.com
+
               </p>
+              
+              <br/>
+
+              <a href="mailto:servicosessenciaisme@gmail.com?subject=Dúvida&body=Olá, gostaria de saber sobre...">
+                <button class="btn-saber">Trabalhe conosco!</button>
+              </a>
+
+            </div>
+
+              <!-- <form class="form">
+                <input class="input" type="text" placeholder="Nome e Sobrenome" required>
+                  <div class="linha-2">
+                    <input class="input" type="email" placeholder="Seu E-mail" required>
+                    <input class="input" type="text" placeholder="(DDD) + 9 + celular" required>
+                  </div>
+                <input class="input" type="text" placeholder="Assunto" required>
+                <input class="input" id="input-Especial" type="text" placeholder="Digite sua dúvida ou mensagem " required> -->
+
+              <!-- </form> -->
+
+            </div>
+            
+            <hr>
+
               <div class="social">
                 <a href="https://www.facebook.com/share/179UpHqAyT/"
                   ><img src="imagens/facebook.jpg" alt="Facebook"
                 /></a>
-                <a href="https://www.instagram.com/servicos_essenciais?igsh=OHJlbzJ1YnN0Y3c2"
+                <a
+                  href="https://www.instagram.com/servicos_essenciais?igsh=OHJlbzJ1YnN0Y3c2"
                   ><img src="imagens/instagram.jpg" alt="Instagram"
                 /></a>
+                <p>© 2025 Todos os direitos reservados | Serviços Essenciais LTDA</p>
               </div>
-            </div>
-          </div>
+
+            
+          <!-- <hr /> -->
         </div>
       </footer>
     </main>
